@@ -1,0 +1,32 @@
+<script type="text/javascript">
+    RED.nodes.registerType('secure-excel',{
+        category: 'function',
+        color: '##6B8E23',
+        defaults: {
+            name: {value:""}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "file.png",
+        label: function() {
+            return this.name||"secure-excel";
+        }
+    });
+</script>
+
+<script type="text/html" data-template-name="secure-excel">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="secure-excel">
+    <p>Converts a JSON or array of JSONs to excel and writes to the file specified
+<br/><br/>
+Expects the JSON to be msg.payload
+<br/><br/>
+File path can be configured as msg.filepath<br/>
+Sheet Name can be configured as msg.sheetName<br/>
+Password can be configured as msg.pwd<br/></p>
+</script>
