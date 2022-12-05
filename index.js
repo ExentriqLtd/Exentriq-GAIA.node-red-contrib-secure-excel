@@ -19,6 +19,8 @@ module.exports = function(RED) {
 			
 			const data = msg.payload;
 			
+			node.warn("data " + data);
+			
 			const sheetName = msg.sheetName || "Sheet 1";
 			
 			// Create worksheets
