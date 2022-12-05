@@ -35,7 +35,7 @@ module.exports = function(RED) {
 				]);
 			}
 			
-            return msg;
+            node.send(msg);
             
         });
     }
